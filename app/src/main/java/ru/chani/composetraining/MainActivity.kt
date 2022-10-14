@@ -22,7 +22,40 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
+            Row(
+                modifier = Modifier
+                    .background(color = Color.Cyan)
+                    .fillMaxWidth()
+                    .fillMaxHeight(0.5f),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Column(
+                    modifier = Modifier
+                        .background(Color.Yellow)
+                        .fillMaxHeight()
+                        .fillMaxWidth(0.5f),
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    verticalArrangement = Arrangement.SpaceEvenly
+                ) {
+                    Text(text = "Hi Abad")
+                    Text(text = "Hi Krasnovegas")
+                    Text(text = "Bye DashoguZ")
+                }
 
+
+                Column(
+                    modifier = Modifier
+                        .background(Color.Green)
+                        .fillMaxHeight(),
+                    verticalArrangement = Arrangement.SpaceEvenly,
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    Text(text = "Hi Abad")
+                    Text(text = "Hi Krasnovegas")
+                    Text(text = "Bye DashoguZ")
+                    Text(text = "Wow Merw")
+                }
+            }
         }
     }
 }
