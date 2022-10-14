@@ -47,18 +47,12 @@ private fun listItem(name: String, message: String) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(10.dp)
-            .background(Color.Blue),
+            .padding(10.dp),
         shape = RoundedCornerShape(15.dp),
         elevation = 5.dp
     ) {
-        Box(
-            modifier = Modifier
-                .background(Color.Green)
-        ) {
+        Box(modifier = Modifier.background(Color(0xFFDDFFFB))) {
             Row(
-                modifier = Modifier
-                    .background(Color.DarkGray),
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Image(
@@ -73,15 +67,10 @@ private fun listItem(name: String, message: String) {
                 Column(
                     modifier = Modifier
                         .padding(5.dp)
-                        .fillMaxWidth()
-                        .background(Color.Red),
+                        .fillMaxWidth(),
                     verticalArrangement = Arrangement.Center,
                 ) {
-                    Text(
-                        text = name,
-                        modifier = Modifier
-                            .background(Color.Yellow)
-                    )
+                    Text(text = name)
                     Text(text = message)
                 }
             }
